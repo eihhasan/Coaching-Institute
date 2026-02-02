@@ -11,7 +11,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-foreground to-black text-white mt-20 overflow-hidden">
+    <footer className="relative bg-linear-to-b from-foreground to-black text-white mt-20 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid opacity-5"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -23,7 +23,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300">
+              <div className="h-12 w-12 rounded-xl bg-linear-to-br from-primary to-primary/80 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300">
                 <Sparkles className="h-6 w-6" />
               </div>
               <div>
@@ -142,7 +142,7 @@ export function Footer() {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 h-12 w-12 rounded-full bg-gradient-to-br from-primary to-primary/80 text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:scale-110 transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 h-12 w-12 rounded-full bg-linear-to-br from-primary to-primary/80 text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:scale-110 transition-all duration-300 z-50"
       >
         <ArrowUp className="h-5 w-5" />
       </button>

@@ -96,7 +96,7 @@ export function CoursesGrid() {
                 <div className="space-y-3 py-4 border-y border-border/50">
                   {/* Instructor */}
                   <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center hover:bg-transparent">
                       <User className="h-5 w-5 text-primary" />
                     </div>
                     <div>

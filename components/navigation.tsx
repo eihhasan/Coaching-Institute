@@ -36,10 +36,10 @@ export function Navigation() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
+                <div className="h-10 w-10 rounded-xl bg-linear-to-br from-primary to-primary/80 text-primary-foreground flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
                   <Sparkles className="h-5 w-5" />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-transparent rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-linear-to-br from-primary/20 to-transparent rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="hidden sm:block">
                 <span className="text-xl font-bold tracking-tight text-foreground">Coaching</span>
@@ -56,7 +56,7 @@ export function Navigation() {
                   className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 group"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/50 group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-primary to-primary/50 group-hover:w-3/4 transition-all duration-300 rounded-full"></span>
                 </Link>
               ))}
 
@@ -64,7 +64,7 @@ export function Navigation() {
                 <Link href="/courses">
                   <Button
                     size="sm"
-                    className="rounded-full px-6 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105"
+                    className="rounded-full px-6 bg-linear-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105"
                   >
                     Get Started
                   </Button>
@@ -102,7 +102,7 @@ export function Navigation() {
             ))}
             <div className="pt-4 mt-2 border-t border-border/50">
               <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-sm font-bold shadow-lg shadow-primary/20">
+                <Button className="w-full h-12 rounded-xl bg-linear-to-r from-primary to-primary/90 text-sm font-bold shadow-lg shadow-primary/20">
                   Get Started
                 </Button>
               </Link>

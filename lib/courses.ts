@@ -18,6 +18,7 @@ export interface Course {
   location?: string;
   classroom?: string;
   includesMaterials?: boolean;
+  videoCount?: number;
 }
 
 export interface Enrollment {
@@ -33,7 +34,7 @@ const ENROLLMENTS_KEY = 'coaching_enrollments';
 
 // Get all courses
 export function getAllCourses(): Course[] {
-  if (typeof window === 'undefined') return [];
+  if (typeof window === 'undefined') return getDefaultCourses();
   const courses = localStorage.getItem(COURSES_KEY);
   return courses ? JSON.parse(courses) : getDefaultCourses();
 }
@@ -56,6 +57,7 @@ function getDefaultCourses(): Course[] {
       location: 'Main Campus',
       classroom: 'Room A-101',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -73,6 +75,7 @@ function getDefaultCourses(): Course[] {
       location: 'Main Campus',
       classroom: 'Lab B-202',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -90,6 +93,7 @@ function getDefaultCourses(): Course[] {
       location: 'Main Campus',
       classroom: 'Room C-303',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -107,6 +111,7 @@ function getDefaultCourses(): Course[] {
       location: 'Science Block',
       classroom: 'Lab P-401',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -124,6 +129,7 @@ function getDefaultCourses(): Course[] {
       location: 'Science Block',
       classroom: 'Lab C-402',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -141,6 +147,7 @@ function getDefaultCourses(): Course[] {
       location: 'Main Campus',
       classroom: 'Room M-501',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -158,6 +165,7 @@ function getDefaultCourses(): Course[] {
       location: 'Main Campus',
       classroom: 'Room F-102',
       includesMaterials: true,
+      videoCount: 20,
       createdAt: new Date().toISOString(),
     },
     {
@@ -175,6 +183,7 @@ function getDefaultCourses(): Course[] {
       location: 'Science Block',
       classroom: 'Lab B-403',
       includesMaterials: true,
+      videoCount: 24,
       createdAt: new Date().toISOString(),
     },
   ];
