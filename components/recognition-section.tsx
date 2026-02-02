@@ -65,10 +65,10 @@ export function RecognitionSection() {
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">Recognized by <span className="text-primary">Excellence</span></h2>
             <p className="text-base text-muted-foreground leading-relaxed">Our commitment to academic precision is validated by prestigious global certifications and domestic honors. We maintain the highest standards of integrity and educational quality.</p>
 
-            <div className="flex flex-wrap gap-6 opacity-60 pt-4">
-              <div className="text-lg font-bold tracking-tight text-foreground/50">CBSE APPROVED</div>
-              <div className="text-lg font-bold tracking-tight text-primary/50">NIOS PARTNER</div>
-              <div className="text-lg font-bold tracking-tight text-foreground/50">ISO 9001:2015</div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-foreground/50 border border-border/50 rounded-lg p-2 text-center">CBSE APPROVED</div>
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-primary/50 border border-primary/20 bg-primary/5 rounded-lg p-2 text-center">NIOS PARTNER</div>
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-foreground/50 border border-border/50 rounded-lg p-2 text-center">ISO 9001:2015</div>
             </div>
           </div>
 

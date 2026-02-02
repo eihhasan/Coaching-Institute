@@ -16,7 +16,7 @@ export default function AboutPage() {
       <main className="grow">
 
         {/* Hero Section - Simple & Professional */}
-        <section className="relative overflow-hidden py-20 bg-muted/30">
+        <section className="relative overflow-hidden py-12 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <Badge variant="secondary" className="px-3 py-0.5 text-xs font-bold text-primary border-primary/10">
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </section>
 
         {/* Story Section - Clean Layout */}
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6 animate-in fade-in slide-in-from-left-4 duration-700">
@@ -87,7 +87,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission CTA - Clean Banner */}
-        <section className="py-20 bg-primary/5">
+        <section className="py-12 md:py-20 bg-primary/5">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">Ready to start your journey?</h2>

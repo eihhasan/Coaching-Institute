@@ -18,7 +18,7 @@ export default function ContactPage() {
       <main className="grow">
 
         {/* Header Section */}
-        <section className="relative py-20 bg-muted/30">
+        <section className="relative py-12 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4 relative z-10 text-center space-y-6">
             <Badge variant="secondary" className="px-3 py-0.5 text-xs font-bold text-primary border-primary/10">
               Contact Us
@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -60,7 +60,7 @@ export default function ContactPage() {
 
               {/* Contact Form */}
               <div className="lg:col-span-2 animate-in fade-in slide-in-from-right-4 duration-700">
-                <Card className="h-full border-border/50 shadow-sm rounded-2xl p-8 md:p-12">
+                <Card className="h-full border-border/50 shadow-sm rounded-2xl p-6 sm:p-8 md:p-12">
                   <div className="space-y-8">
                     <div className="space-y-2 text-left">
                       <h2 className="text-2xl font-bold tracking-tight text-foreground">Send a Message</h2>

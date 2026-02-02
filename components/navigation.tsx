@@ -27,8 +27,8 @@ export function Navigation() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-primary/5 border-b border-border/50'
-          : 'bg-transparent'
+        ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-primary/5 border-b border-border/50'
+        : 'bg-transparent'
         }`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -87,22 +87,22 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
           }`}>
-          <div className="bg-white/95 backdrop-blur-xl border-t border-border/50 px-4 py-4 space-y-2">
+          <div className="bg-white/95 backdrop-blur-xl border-t border-border/50 px-4 py-6 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
+                className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-200"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="pt-2 mt-2 border-t border-border/50">
+            <div className="pt-4 mt-2 border-t border-border/50">
               <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full rounded-lg bg-gradient-to-r from-primary to-primary/90">
+                <Button className="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-sm font-bold shadow-lg shadow-primary/20">
                   Get Started
                 </Button>
               </Link>

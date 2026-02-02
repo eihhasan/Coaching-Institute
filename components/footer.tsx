@@ -128,13 +128,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-white/50 flex items-center gap-1">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+          <p className="text-xs sm:text-sm text-white/50 flex items-center justify-center md:justify-start gap-1.5 flex-wrap">
             © 2025 Coaching Institute. Made with <Heart className="h-3 w-3 text-red-500 fill-red-500" /> in India
           </p>
-          <div className="flex gap-8">
-            <Link href="#" className="text-sm text-white/50 hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-white/50 hover:text-primary transition-colors">Terms of Service</Link>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
+            <Link href="#" className="text-xs sm:text-sm text-white/50 hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="#" className="text-xs sm:text-sm text-white/50 hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
