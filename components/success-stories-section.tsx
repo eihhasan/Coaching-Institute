@@ -3,7 +3,7 @@
 import React from "react"
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { Trophy, Star, Quote, ArrowRight } from 'lucide-react';
+import { Trophy, Star, Quote, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -14,9 +14,8 @@ const successStories = [
         rank: 'AIR 12',
         exam: 'JEE Advanced 2024',
         course: 'Mathematics & Physics',
-        year: '2024',
         quote: 'The personalized attention and structured approach helped me achieve what I dreamed of.',
-        gradient: 'from-amber-500 to-orange-500',
+        gradient: 'from-amber-500 via-orange-500 to-yellow-500',
     },
     {
         name: 'Rahul Verma',
@@ -24,9 +23,8 @@ const successStories = [
         rank: 'AIR 47',
         exam: 'NEET 2024',
         course: 'Biology & Chemistry',
-        year: '2024',
         quote: 'Expert faculty and regular mock tests were the key to my success.',
-        gradient: 'from-emerald-500 to-green-500',
+        gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
     },
     {
         name: 'Ananya Gupta',
@@ -34,9 +32,8 @@ const successStories = [
         rank: 'AIR 89',
         exam: 'JEE Main 2024',
         course: 'Complete Science',
-        year: '2024',
-        quote: 'The study materials and doubt-solving sessions made complex topics easy to understand.',
-        gradient: 'from-blue-500 to-cyan-500',
+        quote: 'The study materials and doubt-solving sessions made complex topics easy.',
+        gradient: 'from-blue-600 via-indigo-500 to-purple-500',
     },
     {
         name: 'Vikash Kumar',
@@ -44,92 +41,89 @@ const successStories = [
         rank: '99.8%ile',
         exam: 'Board Exams 2024',
         course: 'Class 12 Science',
-        year: '2024',
         quote: 'Consistent guidance and practice tests helped me score beyond my expectations.',
-        gradient: 'from-purple-500 to-pink-500',
+        gradient: 'from-fuchsia-500 via-purple-500 to-pink-500',
     },
 ];
 
 export function SuccessStoriesSection() {
     return (
-        <section className="relative py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute inset-0 bg-mesh"></div>
-            <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
+        <section className="relative py-24 bg-white overflow-hidden">
+            {/* Background Decorative Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
+                <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-amber-500/5 rounded-full blur-[120px]" />
+            </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                {/* Premium Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
-                    <div className="flex justify-center">
-                        <Badge className="px-4 py-1.5 text-xs font-semibold rounded-full bg-gradient-to-r from-amber-500/10 to-orange-500/10 text-amber-600 border border-amber-500/20 inline-flex items-center gap-2">
-                            <Trophy className="h-3 w-3" />
-                            Success Stories
-                        </Badge>
+                {/* Section Header */}
+                <div className="flex flex-col items-center text-center mb-20 space-y-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950 text-white text-xs font-bold tracking-widest uppercase shadow-xl">
+                        <Sparkles className="h-4 w-4 text-amber-400" />
+                        The Hall of Excellence
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-                        Our <span className="gradient-text">Top Achievers</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">
+                        Our <span className="text-transparent bg-clip-text gradient-text">Top Achievers</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Meet the students who transformed their dreams into reality with our guidance and mentorship.
+                    <p className="max-w-xl text-slate-500 text-lg">
+                        Meet the exceptional minds who defined success through dedication and our specialized mentorship.
                     </p>
                 </div>
 
-                {/* Success Stories Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Main Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[450px]">
                     {successStories.map((story, index) => (
                         <div
                             key={index}
-                            className="group relative bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden border border-border/50 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                            className={`group relative rounded-[2.5rem] overflow-hidden border border-slate-200 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] 
+                                ${index === 0 ? 'md:col-span-7' : index === 1 ? 'md:col-span-5' : 'md:col-span-6'}`}
                         >
-                            {/* Hover Glow */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${story.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                            {/* Image Background with Overlay */}
+                            <Image
+                                src={story.photo}
+                                alt={story.name}
+                                fill
+                                className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
 
-                            {/* Photo Section */}
-                            <div className="relative h-48 overflow-hidden">
-                                <Image
-                                    src={story.photo}
-                                    alt={story.name}
-                                    fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                {/* Gradient Overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent`}></div>
-
-                                {/* Rank Badge */}
-                                <div className="absolute top-4 right-4">
-                                    <Badge className={`bg-gradient-to-r ${story.gradient} text-white text-sm font-bold px-3 py-1.5 shadow-lg flex items-center gap-1.5`}>
-                                        <Trophy className="h-3.5 w-3.5" />
+                            {/* Content Overlays */}
+                            <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                                {/* Top: Rank Badge */}
+                                <div className="flex justify-between items-start">
+                                    <div className={`px-5 py-2 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 text-white font-bold text-lg shadow-2xl`}>
                                         {story.rank}
-                                    </Badge>
+                                    </div>
+                                    <div className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                                        <Trophy className="h-6 w-6" />
+                                    </div>
                                 </div>
 
-                                {/* Name & Exam */}
-                                <div className="absolute bottom-0 left-0 right-0 p-4">
-                                    <h3 className="text-lg font-bold text-white">{story.name}</h3>
-                                    <p className="text-white/80 text-sm">{story.exam}</p>
-                                </div>
-                            </div>
+                                {/* Bottom: Info */}
+                                <div className="space-y-4">
+                                    <div className="space-y-1">
+                                        <Badge className={`bg-gradient-to-r ${story.gradient} border-none text-white font-bold`}>
+                                            {story.exam}
+                                        </Badge>
+                                        <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                                            {story.name}
+                                        </h3>
+                                    </div>
 
-                            {/* Content Section */}
-                            <div className="p-5 space-y-4">
-                                {/* Quote */}
-                                <div className="relative">
-                                    <Quote className="absolute -top-1 -left-1 h-6 w-6 text-primary/20" />
-                                    <p className="text-sm text-muted-foreground leading-relaxed pl-4 italic">
-                                        "{story.quote}"
-                                    </p>
-                                </div>
+                                    <div className="relative overflow-hidden transition-all duration-500 max-h-0 group-hover:max-h-32 opacity-0 group-hover:opacity-100">
+                                        <p className="text-slate-200 text-sm md:text-base italic leading-relaxed">
+                                            <Quote className="inline-block h-4 w-4 mr-2 text-amber-400 fill-amber-400" />
+                                            {story.quote}
+                                        </p>
+                                    </div>
 
-                                {/* Course Tag */}
-                                <div className="flex items-center justify-between">
-                                    <Badge variant="secondary" className="text-xs bg-primary/5 text-primary border-primary/10">
-                                        {story.course}
-                                    </Badge>
-                                    <div className="flex">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="h-3 w-3 text-amber-500 fill-amber-500" />
-                                        ))}
+                                    <div className="pt-4 flex items-center justify-between border-t border-white/10">
+                                        <span className="text-white/70 text-sm font-medium">{story.course}</span>
+                                        <div className="flex gap-0.5">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="h-3 w-3 text-amber-400 fill-amber-400" />
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,15 +131,16 @@ export function SuccessStoriesSection() {
                     ))}
                 </div>
 
-                {/* View All CTA */}
-                <div className="text-center mt-12">
+                {/* Elegant CTA */}
+                <div className="mt-20 flex flex-col items-center gap-6">
+                    <p className="text-slate-400 font-medium text-sm">Join the ranks of our successful alumni today</p>
                     <Link href="/about">
                         <Button
-                            variant="outline"
-                            className="rounded-full px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5 text-primary font-semibold group"
+                            size="lg"
+                            className="h-14 px-10 rounded-full bg-slate-900 text-white hover:bg-primary transition-all duration-300 group shadow-2xl hover:shadow-primary/20"
                         >
-                            View All Success Stories
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                            Explore All Success Stories
+                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
                         </Button>
                     </Link>
                 </div>

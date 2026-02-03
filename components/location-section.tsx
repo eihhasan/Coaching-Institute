@@ -23,7 +23,7 @@ export function LocationSection() {
                                 Our Campus
                             </Badge>
                             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
-                                Visit Us <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-violet-600">Today</span>
+                                Visit Us <span className="text-transparent bg-clip-text gradient-text">Today</span>
                             </h2>
                             <p className="text-lg text-slate-600 max-w-xl font-medium">
                                 Our state-of-the-art campus is designed to provide an inspiring environment for learning and growth.

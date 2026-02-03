@@ -11,9 +11,9 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-4rem)] lg:h-screen flex items-center justify-center overflow-hidden py-12 lg:py-20 bg-background">
       {/* Premium Background Effects */}
-      <div className="absolute inset-0 bg-mesh"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/10 via-primary/5 to-transparent blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-primary/8 via-transparent to-transparent blur-3xl"></div>
+      {/* <div className="absolute inset-0 bg-mesh"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/10 via-primary/5 to-transparent blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-primary/8 via-transparent to-transparent blur-3xl"></div> */}
 
       {/* Floating Decorative Elements */}
       <div className="absolute top-1/4 left-4 lg:left-10 w-16 lg:w-20 h-16 lg:h-20 rounded-full bg-primary/5 blur-2xl float" />

@@ -23,7 +23,7 @@ export default function AboutPage() {
                 Our Legacy
               </Badge>
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
-                Pioneering <span className="text-primary">Academic Excellence</span>
+                Pioneering <span className="gradient-text">Academic Excellence</span>
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-bottom-2 duration-700 delay-100">
                 For over 25 years, we have been a trusted name in coaching, transforming thousands of ambitious minds into academic leaders.

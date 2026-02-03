@@ -86,9 +86,9 @@ function AnimatedCounter({ value, suffix, duration = 2000 }: { value: number; su
 
 export function AchievementsSection() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
+    <section className="relative py-24  overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-mesh"></div>
+      {/* <div className="absolute inset-0 bg-mesh"></div> */}
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Premium Header */}

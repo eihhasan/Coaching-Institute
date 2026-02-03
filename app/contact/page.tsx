@@ -24,7 +24,7 @@ export default function ContactPage() {
               Contact Us
             </Badge>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700">
-              Get in <span className="text-primary">Touch</span>
+              Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-2 duration-700 delay-100">
               Have questions about our coaching programs? Our team is here to guide your academic journey.
